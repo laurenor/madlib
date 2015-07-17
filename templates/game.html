@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Game</title>
+    <title>Madlibs Game</title>
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet'>
+    <link href='http://fonts.googleapis.com/css?family=Covered+By+Your+Grace' rel='stylesheet'>
+    <link href='/static/madlibs.css' rel='stylesheet'>
+     <link rel="shortcut icon" href="/static/img/favicon.ico" type="image/x-icon" />
 </head>
 <body>
-    <h1>Game</h1>
+    <h1>Madlibs Game</h1>
     <form action="/madlib">
         <label>What's your favorite color? <input type="text" name="color"></label>
         <br>
@@ -15,5 +19,35 @@
         <label>How would you describe yourself using one adjective? <input type="text" name="adjective"></label><br>
         <input type="submit">
     </form>
+
+            <img src="http://placekitten.com/g/200/300">
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script>
+
+        function changeImage(evt) {
+        var image = $("img")
+        if (image.attr('src').indexOf("300") !== -1) {
+            image.attr('src', "https://placekitten.com/g/200/301");
+        }
+        else {
+            image.attr('src', "https://placekitten.com/g/200/300");
+        }
+        }
+
+    
+
+
+
+        $("h1").fadeToggle(2000);
+        $("img").on("click", changeImage)
+
+
+
+
+
+
+
+    </script>
 </body>
 </html>
