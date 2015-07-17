@@ -4,50 +4,28 @@
     <title>Madlibs Game</title>
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet'>
     <link href='http://fonts.googleapis.com/css?family=Covered+By+Your+Grace' rel='stylesheet'>
-    <link href='/static/madlibs.css' rel='stylesheet'>
-     <link rel="shortcut icon" href="/static/img/favicon.ico" type="image/x-icon" />
+    <link href='/static/css/madlibs.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="/static/img/favicon.ico" type="image/x-icon" />
 </head>
 <body>
+    <center>
     <h1>Madlibs Game</h1>
+    <h3>{{ person }}, ready to play?</h3>
     <form action="/madlib">
-        <label>What's your favorite color? <input type="text" name="color"></label>
+        <label>What's your favorite color? <input type="text" name="color" required></label>
         <br>
-        <label>What's your favorite thing? <input type="text" name="noun"></label>
+        <label>What's your favorite thing? <input type="text" name="noun" required></label>
         <br>
-        <label>Who's your favorite person? <input type="text" name="person"></label>
+        <label>Who's your favorite person? <input type="text" name="person" required></label>
         <br>
-        <label>How would you describe yourself using one adjective? <input type="text" name="adjective"></label><br>
+        <label>How would you describe yourself using one adjective? <input type="text" name="adjective" required></label><br>
         <input type="submit">
     </form>
-
-            <img src="http://placekitten.com/g/200/300">
+        <p class="small-instruction">Click me!</p>
+        <img src="http://placekitten.com/g/200/300">
 
     <script src="https://code.jquery.com/jquery.js"></script>
-    <script>
-
-        function changeImage(evt) {
-        var image = $("img")
-        if (image.attr('src').indexOf("300") !== -1) {
-            image.attr('src', "https://placekitten.com/g/200/301");
-        }
-        else {
-            image.attr('src', "https://placekitten.com/g/200/300");
-        }
-        }
-
-    
-
-
-
-        $("h1").fadeToggle(2000);
-        $("img").on("click", changeImage)
-
-
-
-
-
-
-
-    </script>
+    <script src="/static/js/script.js"></script>
+    </center>
 </body>
 </html>

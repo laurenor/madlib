@@ -3,12 +3,21 @@ from random import choice
 from flask import Flask, render_template, request
 
 
+
+
 # "__name__" is a special Python variable for the name of the current module
 # Flask wants to know this to know what any imported things are relative to.
 app = Flask(__name__)
 
 # route to handle the landing page of a website.
+
+def start_here():
+    return render_template("compliment.html")
+
 @app.route('/')
+
+
+
 def start_here():
     return render_template("compliment.html")
 
@@ -31,12 +40,13 @@ def start_here():
 
 @app.route('/game')
 def show_game_form():
-    yes = request.args.get("yes")
-    no = request.args.get("no")
-    if no:
-        return render_template("goodbye.html")
+    response = request.args.get("yesno")
+    player_name = request.args.get("person")
+
+    if response == "no":
+        return render_template("goodbye.html", person = player_name)
     else:
-        return render_template("game.html")
+        return render_template("game.html", person = player_name)
 
 @app.route('/madlib')
 def show_madlib():

@@ -4,16 +4,22 @@
   <title>Wanna play?</title>
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet'>
     <link href='http://fonts.googleapis.com/css?family=Covered+By+Your+Grace' rel='stylesheet'>
-    <link href='/static/madlibs.css' rel='stylesheet'>
+    <link href='/static/css/madlibs.css' rel='stylesheet'>
     <link rel="shortcut icon" href="/static/img/favicon.ico" type="image/x-icon" />
 </head>
 <body>
+    <a href="/"><h1>Madlibs Game</h1></a>
     <form action="/game">
+        <label>What's your name? <input type="text" name="person" required></label>
+        <br>
         <label>Would you like to play a game?
-            <input type="radio" name="yes">yes
-            <input type="radio" name="no">no
+            <input type="radio" name="yesno" value="yes">yes
+            <input type="radio" name="yesno" value="no">no
         </label>
-        <input type="submit">
+           <input type="submit">
     </form>
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="/static/js/script.js"></script>
 </body>
 </html>

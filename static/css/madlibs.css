@@ -1,0 +1,42 @@
+h1 {
+    font-family: 'Covered By Your Grace', cursive;
+    font-size: 100px;
+    color: #FFE281;
+    display: none;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-style: italic;
+}
+
+body {
+    background-color: #496C7F ;
+    color: #DFF4FF ;
+    font-family: 'Lato', sans-serif; 
+    font-weight: 300;
+    font-size: 30px;
+    text-align: center;
+}
+
+img {
+    margin-top: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #fff;
+}
+
+.small-instruction {
+    font-size: 20px;
+    margin: 30px 0 5px 0;
+}
